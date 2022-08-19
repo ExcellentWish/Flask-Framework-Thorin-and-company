@@ -22,24 +22,24 @@
     <div class="row featurette">
         {% if loop.index % 2 != 0 %}
             <div class="col-md-7">
-                <h3>{{ member.name }}</h3>
+                <h3><a href="/about/{{ member.url }}">{{ member.name }}</a></h3>
                 <p>
                     {{ member.description }}
                 </p>
             </div>
             <div class="col-md-5">
                 <img src="{{ member.image_source }}"
-                    alt="Member of Thorin company"
+                    alt="Profile image for {{ member.name }}"
                     class="featurette-image imge-responsive">
             </div>
             {% else %}
             <div class="col-md-5">
                 <img src="{{ member.image_source }}"
-                    alt="Member of Thorin company"
+                    alt="Profile image for {{ member.name }}"
                     class="featurette-image imge-responsive">
             </div>
             <div class="col-md-7">
-                <h3>{{ member.name }}</h3>
+                <h3><a href="/about/{{ member.url }}">{{ member.name }}</a></h3>
                 <p>
                     {{ member.description }}
                 </p>
